@@ -1,0 +1,31 @@
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# Pasta de memória temporária e cache de assets
+MemoryCaptures/
+AssetBundles/
+
+# Arquivos gerados pelas IDEs (Rider/VS)
+.idea/
+.vs/
+*.csproj
+*.sln
+*.unitypackage
+*.DotSettings.user
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+## assets do curso
+/Assets/Assets_curso/
+/Assets/Assets_curso.meta
+
+#Logs
+/Logs/
+/obj/
