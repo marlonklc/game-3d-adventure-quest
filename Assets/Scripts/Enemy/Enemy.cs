@@ -10,11 +10,14 @@ public class Enemy : MonoBehaviour {
     public Collider collider;
     public Rigidbody rigidbody;
 
+    public AudioClip hitSfx;
+
     public virtual void Move() {}
 
     public virtual void Attack() {}
 
     public void OnHit(int damage) {
+        AudioManager.Instance.PlaySFX(hitSfx);
 
         life -= damage;
 

@@ -11,6 +11,9 @@ public class Lootbox : MonoBehaviour {
     public Transform spawnPoint;
     
     public GameObject[] loots;
+
+    public AudioClip destroySfx;
+    public AudioClip newItemSfx;
     
     private void OnTriggerEnter(Collider other) {
 
@@ -25,6 +28,9 @@ public class Lootbox : MonoBehaviour {
     }
 
     private void Destroy() {
+        AudioManager.Instance.PlaySFX(destroySfx);
+        AudioManager.Instance.PlaySFX(newItemSfx);
+        
         idleLootbox.SetActive(false);
         destroyLootbox.SetActive(true);
         collider.enabled = false;

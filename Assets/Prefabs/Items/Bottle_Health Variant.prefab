@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: itemData
       value: 
       objectReference: {fileID: 11400000, guid: 3532e0463e8e5bc409cad3c58f38fd5d, type: 2}
+    - target: {fileID: 8642645047454627897, guid: 7cafb89b5a0f61f479d0a748962abbbc, type: 3}
+      propertyPath: collectSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 4ba695da1e519024ea75ccb0587d5e1d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -144,6 +144,8 @@ MonoBehaviour:
   loots:
   - {fileID: 966196012865378524, guid: c374c2d5f7febc647aad2a1c5f68b88f, type: 3}
   - {fileID: 1343806498852807248, guid: 5643ac491f4131743a249a8307869c06, type: 3}
+  destroySfx: {fileID: 8300000, guid: 652f7587e35944d4cbd624106c127199, type: 3}
+  newItemSfx: {fileID: 8300000, guid: a77fb56646ef90f4e933b1a90cc02e1d, type: 3}
 --- !u!65 &3348980131039309291
 BoxCollider:
   m_ObjectHideFlags: 0

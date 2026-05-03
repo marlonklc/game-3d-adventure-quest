@@ -6,14 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/main_menu.unity
+    guid: d42a1de6c2bb5df41b2465474762efe0
   - enabled: 1
     path: Assets/Scenes/cena_personagem.unity
     guid: 892a21aa14d3841409e278b991e345a6
-  - enabled: 1
-    path: Assets/Scenes/main_menu.unity
-    guid: d42a1de6c2bb5df41b2465474762efe0
   - enabled: 1
     path: Assets/Scenes/customization.unity
     guid: ffac383301fc33c4bb2145d639071c93
@@ -23,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/house.unity
     guid: b080f6d4a75ad214781be3bcbb36000b
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

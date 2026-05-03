@@ -17,6 +17,8 @@ public class PlayerHealth : MonoBehaviour {
 
     public GameObject gameOverPanel;
     public GameObject playerHitFx;
+    
+    public AudioClip takeDamageSfx;
 
     private Player player;
 
@@ -36,6 +38,7 @@ public class PlayerHealth : MonoBehaviour {
     }
     
     public void TakeDamage(int damage) {
+        AudioManager.Instance.PlaySFX(takeDamageSfx);
         player.ShakeCamera();
         GameObject hitEffect = Instantiate(playerHitFx, transform.position + new Vector3(0, 1f, 0), transform.rotation);
         Destroy(hitEffect, 2f);

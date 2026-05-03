@@ -118,3 +118,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coin
   coinCollectPrefab: {fileID: 1209050926943517156, guid: c603da34a322e7d458b1618f9fb8089b, type: 3}
+  collectSfx: {fileID: 8300000, guid: 4a6029e41e88d5d41859e97081066cbc, type: 3}

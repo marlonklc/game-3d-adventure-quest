@@ -13,6 +13,9 @@ public class Inventory : MonoBehaviour {
     
     private List<InventorySlot> slots;
 
+    public AudioClip openInventorySfx;
+    public AudioClip closeInventorySfx;
+
     private void Awake() {
         Instance = this;
         
@@ -23,6 +26,8 @@ public class Inventory : MonoBehaviour {
         
         if (Keyboard.current.escapeKey.wasPressedThisFrame) {
             inventoryCanvas.SetActive(false);
+            AudioManager.Instance.PlaySFX(closeInventorySfx);
+            //Player.Instance.isPaused = false;
         }
     }
 
@@ -32,5 +37,11 @@ public class Inventory : MonoBehaviour {
         if (firstSlotEmpty != null) {
             firstSlotEmpty.itemData = itemData;
         }
+    }
+
+    public void ShowInventory() {
+       // Player.Instance.isPaused = true;
+        AudioManager.Instance.PlaySFX(openInventorySfx);
+        inventoryCanvas.SetActive(true);
     }
 }

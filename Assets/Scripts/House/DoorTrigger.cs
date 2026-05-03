@@ -12,6 +12,8 @@ public class DoorTrigger : MonoBehaviour {
     
     private bool isPlayerNearby;
 
+    public AudioClip doorOpenSfx;
+
     private void Update() {
 
         if (isPlayerNearby && Input.GetKeyDown(KeyCode.E)) {
@@ -33,6 +35,8 @@ public class DoorTrigger : MonoBehaviour {
     }
 
     void LoadHouseScene() {
+        AudioManager.Instance.PlaySFX(doorOpenSfx);
+        
         StartCoroutine(FadeScene());
     }
 

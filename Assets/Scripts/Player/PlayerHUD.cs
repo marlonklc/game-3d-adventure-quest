@@ -5,7 +5,6 @@ public class PlayerHUD : MonoBehaviour {
     
     public TextMeshProUGUI coinsAmountText;
     public Canvas canvas;
-    public Canvas inventoryCanvas;
 
     public void DefineCoinsAmount(int coinsAmount) {
         coinsAmountText.text = coinsAmount.ToString();

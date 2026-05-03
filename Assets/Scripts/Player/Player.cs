@@ -1,6 +1,6 @@
-using System;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour {
 
@@ -14,6 +14,8 @@ public class Player : MonoBehaviour {
     public PlayerHUD playerHUD;
     public PlayerHealth playerHealth;
     public PlayerCustomizationBody playerCustomizationBody;
+
+    public AudioClip attackSfx;
 
     CharacterController controller;
     Animator animator;
@@ -48,11 +50,11 @@ public class Player : MonoBehaviour {
     }
 
     void Update() {
-        if (!isPaused) {
-            Move();
-            Attack();
-            UpdateAttackState();
-        }
+        if (isPaused) return;
+        
+        Move();
+        Attack();
+        UpdateAttackState();
     }
 
     void Move() {
@@ -82,7 +84,13 @@ public class Player : MonoBehaviour {
     }
 
     private void Attack() {
+        // bloqueia ataque em cima de algum item de HUD, porem nao funciona 100%
+        /*if (EventSystem.current && EventSystem.current.IsPointerOverGameObject()) {
+            return;
+        }*/
+        
         if (Input.GetMouseButtonDown(0) && !isAttacking) {
+            AudioManager.Instance.PlaySFX(attackSfx);
             animator.SetTrigger(ANIMATOR_ATTACK);
             isAttacking = true;
             attackCooldown = 0.53f;
